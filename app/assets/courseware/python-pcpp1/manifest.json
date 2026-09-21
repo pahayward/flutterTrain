@@ -1,0 +1,253 @@
+{
+    "courseId": "python-pcpp1",
+    "title": "PCPP1: Certified Professional Python Programmer",
+    "subtitle": "Advanced OOP, best practices, GUI, networking, file processing",
+    "language": "python",
+    "examMode": {
+        "questionCount": 45,
+        "durationMinutes": 65,
+        "passPct": 70
+    },
+    "sections": [
+        {
+            "id": "01-object-oriented",
+            "title": "Section 1: Advanced Object-Oriented Programming",
+            "weight": 35,
+            "modules": [
+                {
+                    "id": "01-oop-basics",
+                    "title": "Classes, instances, attributes, methods",
+                    "order": 1
+                },
+                {
+                    "id": "02-reflection",
+                    "title": "Reflection: isinstance, issubclass, type checks",
+                    "order": 2
+                },
+                {
+                    "id": "03-magic-methods",
+                    "title": "Magic methods",
+                    "order": 3
+                },
+                {
+                    "id": "04-inheritance-polymorphism",
+                    "title": "Inheritance, polymorphism, MRO",
+                    "order": 4
+                },
+                {
+                    "id": "05-composition",
+                    "title": "Composition vs inheritance",
+                    "order": 5
+                },
+                {
+                    "id": "06-args-kwargs-decorators",
+                    "title": "Extended argument syntax & decorators",
+                    "order": 6
+                },
+                {
+                    "id": "07-static-class-methods",
+                    "title": "Static and class methods",
+                    "order": 7
+                },
+                {
+                    "id": "08-abstract-classes",
+                    "title": "Abstract classes and methods",
+                    "order": 8
+                },
+                {
+                    "id": "09-encapsulation",
+                    "title": "Attribute encapsulation",
+                    "order": 9
+                },
+                {
+                    "id": "10-subclassing-builtins",
+                    "title": "Subclassing built-in classes",
+                    "order": 10
+                },
+                {
+                    "id": "11-advanced-exceptions",
+                    "title": "Advanced techniques for exceptions",
+                    "order": 11
+                },
+                {
+                    "id": "12-copy-serialization",
+                    "title": "Shallow & deep copy + (de)serialization",
+                    "order": 12
+                },
+                {
+                    "id": "13-metaclasses",
+                    "title": "Metaprogramming & metaclasses",
+                    "order": 13
+                },
+                {
+                    "id": "14-section-practice",
+                    "title": "Section 1 Practice",
+                    "order": 14
+                }
+            ]
+        },
+        {
+            "id": "02-best-practices",
+            "title": "Section 2: Coding Conventions, Best Practices, and Standardization",
+            "weight": 12,
+            "modules": [
+                {
+                    "id": "01-peps",
+                    "title": "PEPs and the Python philosophy",
+                    "order": 1
+                },
+                {
+                    "id": "02-pep8-code-layout",
+                    "title": "PEP 8: code layout",
+                    "order": 2
+                },
+                {
+                    "id": "03-imports-quotes-whitespace",
+                    "title": "PEP 8: imports, quotes, whitespace",
+                    "order": 3
+                },
+                {
+                    "id": "04-comments-docstrings",
+                    "title": "Comments vs documentation strings",
+                    "order": 4
+                },
+                {
+                    "id": "05-naming-recommendations",
+                    "title": "PEP 8: naming conventions & programming recommendations",
+                    "order": 5
+                },
+                {
+                    "id": "06-docstrings-type-hints",
+                    "title": "PEP 257 docstrings + PEP 484 type hints",
+                    "order": 6
+                },
+                {
+                    "id": "07-section-practice",
+                    "title": "Section 2 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "03-gui",
+            "title": "Section 3: GUI Programming",
+            "weight": 20,
+            "modules": [
+                {
+                    "id": "01-gui-concepts",
+                    "title": "GUI concepts & terminology",
+                    "order": 1
+                },
+                {
+                    "id": "02-tkinter-first-gui",
+                    "title": "First tkinter program",
+                    "order": 2
+                },
+                {
+                    "id": "03-widgets-layout",
+                    "title": "Widgets & geometry managers",
+                    "order": 3
+                },
+                {
+                    "id": "04-place-grid-in-depth",
+                    "title": "place() and grid() in depth",
+                    "order": 4
+                },
+                {
+                    "id": "05-events-handlers",
+                    "title": "Events & event handling",
+                    "order": 5
+                },
+                {
+                    "id": "06-input-validation-canvas",
+                    "title": "Input validation & Canvas",
+                    "order": 6
+                },
+                {
+                    "id": "07-observables-dialogs-colors",
+                    "title": "Observable variables, dialogs, colors",
+                    "order": 7
+                },
+                {
+                    "id": "08-section-practice",
+                    "title": "Section 3 Practice",
+                    "order": 8
+                }
+            ]
+        },
+        {
+            "id": "04-network",
+            "title": "Section 4: Network Programming",
+            "weight": 18,
+            "modules": [
+                {
+                    "id": "01-network-basics",
+                    "title": "Fundamentals of network programming",
+                    "order": 1
+                },
+                {
+                    "id": "02-sockets",
+                    "title": "Working with sockets",
+                    "order": 2
+                },
+                {
+                    "id": "03-json",
+                    "title": "JSON data transfer",
+                    "order": 3
+                },
+                {
+                    "id": "04-xml",
+                    "title": "XML data transfer",
+                    "order": 4
+                },
+                {
+                    "id": "05-rest-client",
+                    "title": "Building a REST client",
+                    "order": 5
+                },
+                {
+                    "id": "06-section-practice",
+                    "title": "Section 4 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "05-file-processing",
+            "title": "Section 5: File Processing and Communicating with a Program's Environment",
+            "weight": 15,
+            "modules": [
+                {
+                    "id": "01-sqlite3",
+                    "title": "Database programming with sqlite3",
+                    "order": 1
+                },
+                {
+                    "id": "02-csv",
+                    "title": "Processing CSV files",
+                    "order": 2
+                },
+                {
+                    "id": "03-xml-processing",
+                    "title": "Building and parsing XML",
+                    "order": 3
+                },
+                {
+                    "id": "04-logging",
+                    "title": "Logging",
+                    "order": 4
+                },
+                {
+                    "id": "05-configparser",
+                    "title": "Configuration files with configparser",
+                    "order": 5
+                },
+                {
+                    "id": "06-section-practice",
+                    "title": "Section 5 Practice",
+                    "order": 6
+                }
+            ]
+        }
+    ]
+}

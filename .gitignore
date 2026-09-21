@@ -1,0 +1,33 @@
+# Build outputs
+build/
+.gradle/
+*.apk
+*.aab
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Flutter/Dart tooling
+.dart_tool/
+.idea/
+*.iml
+
+# Machine-local config and secrets
+local.properties
+.env
+.env.*
+*.jks
+*.keystore
+key.properties
+
+# Local Claude Code state
+.claude/
+
+# Session scratch files
+continue.txt
+session-ses_*.md
+file_*.jpg
+
+.DS_Store

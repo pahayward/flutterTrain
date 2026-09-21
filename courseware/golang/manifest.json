@@ -1,0 +1,351 @@
+{
+    "courseId": "golang",
+    "title": "Go (Golang): Zero to Hero",
+    "subtitle": "Compilation model, language design, interfaces, concurrency, tooling",
+    "language": "golang",
+    "examMode": {
+        "questionCount": 40,
+        "durationMinutes": 50,
+        "passPct": 70
+    },
+    "sections": [
+        {
+            "id": "00-foundations",
+            "title": "Part 0: Foundations",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-go-and-compilation",
+                    "title": "How Go works: the compilation model",
+                    "order": 1
+                },
+                {
+                    "id": "02-first-program",
+                    "title": "Your first program: build, run, install",
+                    "order": 2
+                },
+                {
+                    "id": "03-variables-types",
+                    "title": "Variables, types, zero values",
+                    "order": 3
+                },
+                {
+                    "id": "04-constants",
+                    "title": "Constants and iota",
+                    "order": 4
+                },
+                {
+                    "id": "05-tooling",
+                    "title": "Tooling: gofmt, go vet, go doc",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 0 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "01-language-basics",
+            "title": "Part 1: Language Basics",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-pointers",
+                    "title": "Pointers: & and *",
+                    "order": 1
+                },
+                {
+                    "id": "02-functions",
+                    "title": "Functions",
+                    "order": 2
+                },
+                {
+                    "id": "03-control-flow",
+                    "title": "Control flow: if, for, switch",
+                    "order": 3
+                },
+                {
+                    "id": "04-strings-runes",
+                    "title": "Strings and runes",
+                    "order": 4
+                },
+                {
+                    "id": "05-conversions",
+                    "title": "Type conversions and safety",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 1 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "02-composite-types",
+            "title": "Part 2: Composite Types",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-arrays",
+                    "title": "Arrays",
+                    "order": 1
+                },
+                {
+                    "id": "02-slices",
+                    "title": "Slices",
+                    "order": 2
+                },
+                {
+                    "id": "03-maps",
+                    "title": "Maps",
+                    "order": 3
+                },
+                {
+                    "id": "04-structs",
+                    "title": "Structs",
+                    "order": 4
+                },
+                {
+                    "id": "05-range",
+                    "title": "Range",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 2 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "03-functions-deep",
+            "title": "Part 3: Functions, Deep",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-variadic",
+                    "title": "Variadic functions and slices",
+                    "order": 1
+                },
+                {
+                    "id": "02-closures",
+                    "title": "Closures and first-class functions",
+                    "order": 2
+                },
+                {
+                    "id": "03-defer-panic-recover",
+                    "title": "defer, panic, recover",
+                    "order": 3
+                },
+                {
+                    "id": "04-generics",
+                    "title": "Generics",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 3 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "04-methods-interfaces",
+            "title": "Part 4: Methods & Interfaces (design philosophy)",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-methods",
+                    "title": "Methods",
+                    "order": 1
+                },
+                {
+                    "id": "02-interfaces-basics",
+                    "title": "Interfaces I: structural typing",
+                    "order": 2
+                },
+                {
+                    "id": "03-interface-design",
+                    "title": "Interfaces II: the Go philosophy",
+                    "order": 3
+                },
+                {
+                    "id": "04-interfaces-in-action",
+                    "title": "Interfaces III: stdlib contracts",
+                    "order": 4
+                },
+                {
+                    "id": "05-pointers-vs-values",
+                    "title": "Pointers vs values: a decision guide",
+                    "order": 5
+                },
+                {
+                    "id": "06-composition-over-inheritance",
+                    "title": "Composition over inheritance \u2014 the Go way",
+                    "order": 6
+                },
+                {
+                    "id": "07-part-practice",
+                    "title": "Part 4 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "05-concurrency",
+            "title": "Part 5: Concurrency",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-goroutines",
+                    "title": "Goroutines",
+                    "order": 1
+                },
+                {
+                    "id": "02-channels",
+                    "title": "Channels",
+                    "order": 2
+                },
+                {
+                    "id": "03-select",
+                    "title": "select",
+                    "order": 3
+                },
+                {
+                    "id": "04-sync",
+                    "title": "Sync primitives",
+                    "order": 4
+                },
+                {
+                    "id": "05-context",
+                    "title": "context",
+                    "order": 5
+                },
+                {
+                    "id": "06-concurrency-patterns",
+                    "title": "Concurrency patterns",
+                    "order": 6
+                },
+                {
+                    "id": "07-part-practice",
+                    "title": "Part 5 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "06-stdlib",
+            "title": "Part 6: Standard Library",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-fmt",
+                    "title": "fmt: printing verbs",
+                    "order": 1
+                },
+                {
+                    "id": "02-io",
+                    "title": "io: Reader, Writer, files",
+                    "order": 2
+                },
+                {
+                    "id": "03-time",
+                    "title": "time",
+                    "order": 3
+                },
+                {
+                    "id": "04-strings-bytes",
+                    "title": "strings, strconv, bytes",
+                    "order": 4
+                },
+                {
+                    "id": "05-encoding-json",
+                    "title": "encoding/json",
+                    "order": 5
+                },
+                {
+                    "id": "06-net-http",
+                    "title": "net/http client",
+                    "order": 6
+                },
+                {
+                    "id": "07-part-practice",
+                    "title": "Part 6 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "07-modules-tooling",
+            "title": "Part 7: Modules & Tooling",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-go-mod",
+                    "title": "Modules",
+                    "order": 1
+                },
+                {
+                    "id": "02-testing",
+                    "title": "Testing",
+                    "order": 2
+                },
+                {
+                    "id": "03-benchmarks-profiling",
+                    "title": "Benchmarks and profiling",
+                    "order": 3
+                },
+                {
+                    "id": "04-ecosystem-quality",
+                    "title": "Ecosystem & code quality",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 7 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "08-real-programs",
+            "title": "Part 8: Writing Real Programs",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-cli-app",
+                    "title": "Building a CLI tool",
+                    "order": 1
+                },
+                {
+                    "id": "02-http-server",
+                    "title": "Writing an HTTP server",
+                    "order": 2
+                },
+                {
+                    "id": "03-data-pipeline",
+                    "title": "Reading and writing data",
+                    "order": 3
+                },
+                {
+                    "id": "04-project-structure",
+                    "title": "Project structure & package design",
+                    "order": 4
+                },
+                {
+                    "id": "05-cross-compilation",
+                    "title": "Cross-compilation: from laptop to everywhere",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 8 Practice",
+                    "order": 6
+                }
+            ]
+        }
+    ]
+}
