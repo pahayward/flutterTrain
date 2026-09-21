@@ -72,7 +72,7 @@ id: 01-oop-basics
 title: Classes, instances, attributes, methods
 order: 1
 section: 01-object-oriented
-language: python        # "python" | "golang"
+language: python        # "python" | "golang" | "sql" | "typescript"
 type: lesson            # "lesson" | "cheatsheet"
 tags: [oop, class, instance]
 ---
@@ -96,7 +96,7 @@ class Foo:
 | `title` | yes | string | display title |
 | `order` | yes | int | ordering within the section |
 | `section` | yes | string | section id (must exist in manifest) |
-| `language` | yes | "python"\|"golang" | primary language for example runner |
+| `language` | yes | "python"\|"golang"\|"sql"\|"typescript" | primary language for example runner |
 | `type` | no | "lesson"\|"cheatsheet" | default `lesson` |
 | `tags` | no | [string] | used by search + flashcards |
 | `summary` | no | string | one-line description used in lists |
@@ -128,9 +128,10 @@ print("hello")
 ```
 ````
 
-Language tag required (`python` or `go`). A code block with language `python`
-or `go` is **runnable** by default: the reader shows a Run button in addition
-to Copy.
+Language tag required (`python`, `go`, `sql`, or `typescript`). A code block
+with language `python` or `go` is **runnable** by default: the reader shows a
+Run button in addition to Copy. A `sql` or `typescript` block is always
+display-only (no on-device engine).
 
 ### Non-runnable examples (`eval=no`)
 
@@ -165,6 +166,9 @@ Conventions for code that must run on device:
   features and stdlib packages known to work in yaegi** (list in
   `courseware/golang/parts/00/…`, "yaegi supported features"). Avoid cgo,
   unsafe-pointer-heavy code, `os.Exit`, etc.
+- SQL: no on-device engine. Always display-only; there is no Run button.
+- TypeScript: no on-device engine. Always display-only; there is no Run
+  button.
 - Timeout: max 10s per run on device; output captured as text.
 
 ### 3. Callout (`kind: callout`)

@@ -121,7 +121,13 @@ class _CodeBlockState extends State<CodeBlock> {
             padding: const EdgeInsets.all(10),
             child: HighlightView(
               widget.code,
-              language: widget.language == 'go' ? 'go' : 'python',
+              language: widget.language == 'go'
+                  ? 'go'
+                  : (widget.language == 'sql'
+                      ? 'sql'
+                      : (widget.language == 'typescript'
+                          ? 'typescript'
+                          : 'python')),
               theme: monokaiSublimeTheme,
               padding: EdgeInsets.zero,
               textStyle: PTheme.mono.copyWith(fontSize: 12.5),

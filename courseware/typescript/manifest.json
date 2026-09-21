@@ -1,0 +1,279 @@
+{
+    "courseId": "typescript",
+    "title": "TypeScript: Zero to Hero",
+    "subtitle": "Type system, generics, OOP, modules, async, tooling",
+    "language": "typescript",
+    "examMode": {
+        "questionCount": 40,
+        "durationMinutes": 50,
+        "passPct": 70
+    },
+    "sections": [
+        {
+            "id": "00-foundations",
+            "title": "Part 0: Foundations",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-what-is-typescript",
+                    "title": "What TypeScript is: JS + types",
+                    "order": 1
+                },
+                {
+                    "id": "02-setting-up",
+                    "title": "Tooling: tsc, tsconfig, npm",
+                    "order": 2
+                },
+                {
+                    "id": "03-first-program",
+                    "title": "Your first TypeScript program",
+                    "order": 3
+                },
+                {
+                    "id": "04-basic-types",
+                    "title": "The basic types",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 0 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "01-type-system",
+            "title": "Part 1: The Type System",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-inference-annotations",
+                    "title": "Inference and annotations",
+                    "order": 1
+                },
+                {
+                    "id": "02-unions-literals",
+                    "title": "Union and literal types",
+                    "order": 2
+                },
+                {
+                    "id": "03-aliases-interfaces",
+                    "title": "Type aliases and interfaces",
+                    "order": 3
+                },
+                {
+                    "id": "04-functions",
+                    "title": "Typing functions",
+                    "order": 4
+                },
+                {
+                    "id": "05-objects-arrays",
+                    "title": "Objects, arrays, and tuples",
+                    "order": 5
+                },
+                {
+                    "id": "06-type-narrowing",
+                    "title": "Narrowing: guards, typeof, in",
+                    "order": 6
+                },
+                {
+                    "id": "07-part-practice",
+                    "title": "Part 1 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "02-generics-progres",
+            "title": "Part 2: Generics and Advanced Types",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-generics-basics",
+                    "title": "Generics",
+                    "order": 1
+                },
+                {
+                    "id": "02-constraints",
+                    "title": "Constraints and defaults",
+                    "order": 2
+                },
+                {
+                    "id": "03-utility-types",
+                    "title": "Utility types: Partial, Pick, Omit",
+                    "order": 3
+                },
+                {
+                    "id": "04-mapped-conditional",
+                    "title": "Mapped and conditional types",
+                    "order": 4
+                },
+                {
+                    "id": "05-type-assertions",
+                    "title": "Assertions, unknown, never",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 2 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "03-classes-oop",
+            "title": "Part 3: Classes and OOP",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-class-basics",
+                    "title": "Classes, constructors, fields",
+                    "order": 1
+                },
+                {
+                    "id": "02-modifiers",
+                    "title": "Access modifiers and readonly",
+                    "order": 2
+                },
+                {
+                    "id": "03-abstract",
+                    "title": "Abstract classes and implements",
+                    "order": 3
+                },
+                {
+                    "id": "04-getters-setters",
+                    "title": "Getters, setters, static",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 3 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "04-modules-tooling",
+            "title": "Part 4: Modules and Tooling",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-esmodules",
+                    "title": "ES modules: import and export",
+                    "order": 1
+                },
+                {
+                    "id": "02-declarations",
+                    "title": "Declaration files and @types",
+                    "order": 2
+                },
+                {
+                    "id": "03-tsconfig",
+                    "title": "tsconfig options that matter",
+                    "order": 3
+                },
+                {
+                    "id": "04-build-tooling",
+                    "title": "Bundlers: ts-node, webpack, Vite",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 4 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "05-async",
+            "title": "Part 5: Async and the Real World",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-promises",
+                    "title": "Promises",
+                    "order": 1
+                },
+                {
+                    "id": "02-async-await",
+                    "title": "async and await",
+                    "order": 2
+                },
+                {
+                    "id": "03-error-handling",
+                    "title": "Error handling and typed errors",
+                    "order": 3
+                },
+                {
+                    "id": "04-dom-node",
+                    "title": "The DOM and Node.js types",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 5 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "06-design-patterns",
+            "title": "Part 6: Design Patterns and Idioms",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-narrowing-in-depth",
+                    "title": "Discriminated unions in practice",
+                    "order": 1
+                },
+                {
+                    "id": "02-functional",
+                    "title": "Functional idioms: map, filter, reduce",
+                    "order": 2
+                },
+                {
+                    "id": "03-dependency-injection",
+                    "title": "Dependency injection and inversion",
+                    "order": 3
+                },
+                {
+                    "id": "04-part-practice",
+                    "title": "Part 6 Practice",
+                    "order": 4
+                }
+            ]
+        },
+        {
+            "id": "07-real-projects",
+            "title": "Part 7: Building Real Projects",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-project-structure",
+                    "title": "Structuring a real project",
+                    "order": 1
+                },
+                {
+                    "id": "02-data-modeling",
+                    "title": "Modeling domain data with types",
+                    "order": 2
+                },
+                {
+                    "id": "03-testing",
+                    "title": "Testing TypeScript",
+                    "order": 3
+                },
+                {
+                    "id": "04-migration",
+                    "title": "Migrating JavaScript to TypeScript",
+                    "order": 4
+                },
+                {
+                    "id": "05-capstone",
+                    "title": "Capstone: a type-safe app",
+                    "order": 5
+                }
+            ]
+        }
+    ]
+}

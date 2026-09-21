@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 COURSEWARE = ROOT / "courseware"
 KNOWN_ALERTS = {"note", "tip", "warning", "trap", "key"}
+VALID_LANGUAGES = {"python", "golang", "sql", "typescript"}
 FRONT_MATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.S)
 FENCE_RE = re.compile(r"^```(\w*)( [^\n]*)?\n(.*?)^```", re.M | re.S)
 
@@ -60,7 +61,7 @@ def validate_module(path: Path, errors: list, warnings: list):
         if field not in fm:
             errors.append(f"{path}: missing front matter field {field!r}")
             return
-    if fm["language"] not in ("python", "golang"):
+    if fm["language"] not in ("python", "golang", "sql", "typescript"):
         errors.append(f"{path}: invalid language {fm['language']!r}")
     if fm.get("type", "lesson") not in ("lesson", "cheatsheet"):
         errors.append(f"{path}: invalid type")
