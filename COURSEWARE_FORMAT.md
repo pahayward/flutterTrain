@@ -1,7 +1,7 @@
 # Courseware Format Specification v1
 
-This document defines the on-disk format for all course content in the PCPP1
-Study app. Both bundled content (`courseware/`) and AI/user-generated content
+This document defines the on-disk format for all course content in the
+flutterTrain app. Both bundled content (`courseware/`) and AI/user-generated content
 (installed into the app's documents directory) use the **same format**, so the
 content engine (M7) loads one unified schema.
 

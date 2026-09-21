@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate edube study courseware against COURSEWARE_FORMAT.md v1."""
+"""Validate flutterTrain courseware against COURSEWARE_FORMAT.md v1."""
 import json
 import re
 import sys

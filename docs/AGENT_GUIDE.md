@@ -6,7 +6,7 @@ engine). Below are the universal rules. Your task prompt supplies the exact
 section, module file paths, titles, and syllabus points.
 
 > **App note:** after content changes the Flutter app reads `courseware/` via a
-> build-time export (`tools/export_content.py` → `app/assets/courseware/pack.json`).
+> build-time export (`tools/export_content.py` → `flutter_train/assets/courseware/pack.json`).
 > For a `flutter run` dev loop you must re-run that export after editing content;
 > the whole pipeline is in `tools/build_apk.sh`.
 
@@ -57,7 +57,7 @@ tags: [tag1, tag2]
 - **Go (golang course)**:
   - Examples execute in the `yaegi` interpreter. Confirm each runs with:
     `tools/verify_go_examples.sh <your-files...>` (build failure email/shell
-    stops you — run `(cd app/go && go run ./cmd/checkcontent <files>)`).
+    stops you — run `(cd flutter_train/go && go run ./cmd/checkcontent <files>)`).
   - yaegi supports: functions, structs/methods/interfaces, closures, channels,
     goroutines, most stdlib (fmt, strings, encoding/json, etc). Avoid cgo,
     `os.Exit`, package `init` tricks, and exotic reflection.

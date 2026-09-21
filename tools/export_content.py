@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = Path.home()  # replaced below
 COURSEWARE = ROOT / "courseware"
-OUT = ROOT / "app" / "assets" / "courseware" / "pack.json"
+OUT = ROOT / "flutter_train" / "assets" / "courseware" / "pack.json"
 
 
 def main():

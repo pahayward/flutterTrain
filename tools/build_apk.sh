@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build the offline PCPP1 + Go study APK.
+# Build the flutterTrain offline Python + Go training APK.
 #
 # Prerequisites (see docs/BUILD.md):
 #   - Flutter SDK (>=3.22) with Android toolchain
@@ -15,7 +15,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ROOT="$PWD"
-APP="$ROOT/app"
+APP="$ROOT/flutter_train"
 
 FLUTTER="${FLUTTER:-flutter}"
 GOBIN="${GOBIN:-$(go env GOPATH)/bin}"
@@ -35,7 +35,7 @@ python3 "$ROOT/tools/export_content.py"
 #    which conflict with our Groovy DSL overlay (AGP 8.3.1). Remove them and
 #    pin the wrapper to a Gradle version AGP 8.3.1 supports.
 rsync -a "$APP/android-overlay/" "$APP/android/"
-rm -f "$APP/android/build.gradle.kts" "$APP/android/settings.gradle.kts" "$APP/android/app/build.gradle.kts" "$APP/android/pp1study_android.iml"
+rm -f "$APP/android/build.gradle.kts" "$APP/android/settings.gradle.kts" "$APP/android/app/build.gradle.kts" "$APP/android/flutter_train_android.iml"
 WRAPPER="$APP/android/gradle/wrapper/gradle-wrapper.properties"
 if [ -f "$WRAPPER" ] && ! grep -q "gradle-8.10.2" "$WRAPPER"; then
   sed -i 's#distributionUrl=.*#distributionUrl=https\\://services.gradle.org/distributions/gradle-8.10.2-all.zip#' "$WRAPPER"
@@ -50,7 +50,7 @@ if [ "${SKIP_GO:-0}" != "1" ]; then
     ( cd "$APP/go" && "$GOBIN/gomobile" bind \
         -target=android/arm64 \
         -androidapi=24 \
-        -javapkg com.pp1 \
+        -javapkg com.fluttertrain \
         -o "$GO_AAR" . )
   else
     echo ">> Go engine .aar up to date ($GO_AAR)"
