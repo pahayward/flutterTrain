@@ -1,17 +1,14 @@
-# flutterTrain
+# flutter_train (app)
 
-flutterTrain (the Flutter training harness for Android) runs offline
-python and Go courseware with embedded Python (Chaquopy) and Go (GoMobile)
-runners on Android.
+The Flutter application that powers **flutterTrain** — a fully offline
+training harness for Android that runs Python and Go courseware with embedded
+CPython (Chaquopy) and yaegi (gomobile) runners.
 
-Course content lives in `courseware/` and is bundled into assets by
-`tools/build_apk.sh`, which also overlays the Android Go/Python integration
-and builds the APK. See `docs/BUILD.md` for the full build guide.
+This directory is the Flutter package. It is treated largely as build output:
+run `flutter create` to generate the Android scaffolding, then
+`tools/build_apk.sh` (from the repo root) overlays `android-overlay/`, packs
+the courseware into `assets/courseware/pack.json`, binds the Go engine, and
+builds the release APK.
 
-## Getting Started
-
-A starting point for a Flutter application.
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+See the repository root [`README.md`](../README.md) and
+[`docs/BUILD.md`](../docs/BUILD.md) for setup, build, and verification steps.
