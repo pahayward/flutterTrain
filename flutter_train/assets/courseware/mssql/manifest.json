@@ -1,0 +1,299 @@
+{
+    "courseId": "mssql",
+    "title": "SQL Server: Zero to Hero",
+    "subtitle": "T-SQL from first query to production DBA skills \u2014 Microsoft SQL Server focused",
+    "language": "sql",
+    "examMode": {
+        "questionCount": 40,
+        "durationMinutes": 50,
+        "passPct": 70
+    },
+    "sections": [
+        {
+            "id": "00-foundations",
+            "title": "Part 0: Foundations",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-what-is-sql-server",
+                    "title": "What is SQL Server and T-SQL",
+                    "order": 1
+                },
+                {
+                    "id": "02-relational-model",
+                    "title": "The relational model: tables, rows, keys",
+                    "order": 2
+                },
+                {
+                    "id": "03-first-query",
+                    "title": "Your first query: databases and tools",
+                    "order": 3
+                },
+                {
+                    "id": "04-data-types",
+                    "title": "T-SQL data types",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 0 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "01-query-basics",
+            "title": "Part 1: Querying Basics",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-select-essentials",
+                    "title": "SELECT: columns, aliases, expressions",
+                    "order": 1
+                },
+                {
+                    "id": "02-where-filtering",
+                    "title": "Filtering rows with WHERE",
+                    "order": 2
+                },
+                {
+                    "id": "03-order-by-top",
+                    "title": "Ordering and TOP",
+                    "order": 3
+                },
+                {
+                    "id": "04-null-handling",
+                    "title": "NULL, IS NULL, COALESCE, ISNULL",
+                    "order": 4
+                },
+                {
+                    "id": "05-string-functions",
+                    "title": "String functions",
+                    "order": 5
+                },
+                {
+                    "id": "06-date-functions",
+                    "title": "Date and time functions",
+                    "order": 6
+                },
+                {
+                    "id": "07-part-practice",
+                    "title": "Part 1 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "02-joins-aggregation",
+            "title": "Part 2: Joins and Aggregation",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-join-basics",
+                    "title": "JOIN: combining tables",
+                    "order": 1
+                },
+                {
+                    "id": "02-outer-joins",
+                    "title": "OUTER joins and self joins",
+                    "order": 2
+                },
+                {
+                    "id": "03-aggregates",
+                    "title": "Aggregate functions and GROUP BY",
+                    "order": 3
+                },
+                {
+                    "id": "04-having",
+                    "title": "HAVING and filtering groups",
+                    "order": 4
+                },
+                {
+                    "id": "05-set-operators",
+                    "title": "UNION, INTERSECT, EXCEPT",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 2 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "03-data-modification",
+            "title": "Part 3: Modifying Data",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-insert",
+                    "title": "INSERT: creating rows",
+                    "order": 1
+                },
+                {
+                    "id": "02-update",
+                    "title": "UPDATE: changing rows",
+                    "order": 2
+                },
+                {
+                    "id": "03-delete-truncate",
+                    "title": "DELETE and TRUNCATE",
+                    "order": 3
+                },
+                {
+                    "id": "04-transactions",
+                    "title": "Transactions: COMMIT, ROLLBACK, ACID",
+                    "order": 4
+                },
+                {
+                    "id": "05-part-practice",
+                    "title": "Part 3 Practice",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "id": "04-ddl-schema",
+            "title": "Part 4: Schema Design and DDL",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-create-tables",
+                    "title": "CREATE TABLE and constraints",
+                    "order": 1
+                },
+                {
+                    "id": "02-identity",
+                    "title": "IDENTITY and SEQUENCE",
+                    "order": 2
+                },
+                {
+                    "id": "03-indexes",
+                    "title": "Indexes: clustered and nonclustered",
+                    "order": 3
+                },
+                {
+                    "id": "04-views",
+                    "title": "Views",
+                    "order": 4
+                },
+                {
+                    "id": "05-alter-drop",
+                    "title": "ALTER and DROP: evolving schema",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 4 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "05-programmability",
+            "title": "Part 5: Programmability",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-variables-flow",
+                    "title": "Variables and control flow",
+                    "order": 1
+                },
+                {
+                    "id": "02-stored-procedures",
+                    "title": "Stored procedures and parameters",
+                    "order": 2
+                },
+                {
+                    "id": "03-functions",
+                    "title": "User-defined functions",
+                    "order": 3
+                },
+                {
+                    "id": "04-ctes",
+                    "title": "CTEs and recursion",
+                    "order": 4
+                },
+                {
+                    "id": "05-window-functions",
+                    "title": "Window functions",
+                    "order": 5
+                },
+                {
+                    "id": "06-error-handling",
+                    "title": "Error handling: TRY/CATCH, THROW",
+                    "order": 6
+                },
+                {
+                    "id": "07-part-practice",
+                    "title": "Part 5 Practice",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "id": "06-performance-admin",
+            "title": "Part 6: Performance and Administration",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-query-plans",
+                    "title": "Reading execution plans",
+                    "order": 1
+                },
+                {
+                    "id": "02-sargability",
+                    "title": "Writing sargable queries",
+                    "order": 2
+                },
+                {
+                    "id": "03-locking",
+                    "title": "Locking, blocking, and isolation",
+                    "order": 3
+                },
+                {
+                    "id": "04-backup-restore",
+                    "title": "Backup and restore",
+                    "order": 4
+                },
+                {
+                    "id": "05-security",
+                    "title": "Security: logins, users, roles",
+                    "order": 5
+                },
+                {
+                    "id": "06-part-practice",
+                    "title": "Part 6 Practice",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "id": "07-real-world",
+            "title": "Part 7: Real-World SQL",
+            "weight": 0,
+            "modules": [
+                {
+                    "id": "01-tuning-workflow",
+                    "title": "A query tuning workflow",
+                    "order": 1
+                },
+                {
+                    "id": "02-reporting-queries",
+                    "title": "Building reporting queries",
+                    "order": 2
+                },
+                {
+                    "id": "03-etl-staging",
+                    "title": "ETL patterns in T-SQL",
+                    "order": 3
+                },
+                {
+                    "id": "04-final-capstone",
+                    "title": "Capstone: a complete project",
+                    "order": 4
+                }
+            ]
+        }
+    ]
+}

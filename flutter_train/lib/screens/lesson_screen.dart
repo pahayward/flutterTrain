@@ -22,6 +22,7 @@ class _LessonScreenState extends State<LessonScreen> {
   AppState get s => widget.state;
   ModuleProgress? _prog;
   bool _quizDone = false;
+  double _readFraction = 0;
 
   @override
   void initState() {
@@ -29,6 +30,9 @@ class _LessonScreenState extends State<LessonScreen> {
     _prog = s.progressOf(widget.module.courseId, widget.module.id);
     _scroll = ScrollController(initialScrollOffset: _prog!.lastPosition.toDouble());
     _scroll.addListener(_savePos);
+    // A page that opens already scrolled (resuming a previous read) should
+    // show that progress immediately, not just once the user scrolls again.
+    WidgetsBinding.instance.addPostFrameCallback((_) => _updateReadFraction());
     _loadQuizStatus();
   }
 
@@ -41,6 +45,16 @@ class _LessonScreenState extends State<LessonScreen> {
 
   void _savePos() {
     s.savePosition(widget.module, _scroll.offset.round());
+    _updateReadFraction();
+  }
+
+  void _updateReadFraction() {
+    if (!_scroll.hasClients) return;
+    final max = _scroll.position.maxScrollExtent;
+    // Nothing to scroll (short page) counts as fully read.
+    final fraction = max <= 0 ? 1.0 : (_scroll.offset / max).clamp(0.0, 1.0);
+    if ((fraction - _readFraction).abs() < 0.01) return;
+    setState(() => _readFraction = fraction);
   }
 
   @override
@@ -60,6 +74,16 @@ class _LessonScreenState extends State<LessonScreen> {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontSize: 17),
+        ),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(3),
+          child: LinearProgressIndicator(
+            value: _prog!.completed ? 1.0 : _readFraction,
+            minHeight: 3,
+            backgroundColor: kSurfaceAlt,
+            valueColor: AlwaysStoppedAnimation(
+                _prog!.completed ? const Color(0xFF7BC47F) : kAccent),
+          ),
         ),
         actions: [
           IconButton(

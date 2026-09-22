@@ -57,6 +57,7 @@ class _CourseScreenState extends State<CourseScreen> {
         children: [
           for (var i = 0; i < course.sections.length; i++)
             _SectionTile(
+              state: s,
               section: course.sections[i],
               index: i,
               progress: sectionProgressOf(course.sections[i]),
@@ -87,11 +88,13 @@ class _CourseScreenState extends State<CourseScreen> {
 }
 
 class _SectionTile extends StatefulWidget {
+  final AppState state;
   final Section section;
   final int index;
   final double progress;
   final void Function(Module) onTapModule;
   const _SectionTile({
+    required this.state,
     required this.section,
     required this.index,
     required this.progress,
@@ -142,11 +145,30 @@ class _SectionTileState extends State<_SectionTile> {
   }
 
   Widget _moduleTile(Module m) {
+    final prog = widget.state.progressOf(m.courseId, m.id);
+    final inProgress = !prog.completed && prog.lastPosition > 0;
     return ListTile(
       dense: true,
       contentPadding: const EdgeInsets.only(left: 24, right: 16),
-      leading: const Icon(Icons.menu_book_outlined, size: 18),
+      leading: Icon(
+        prog.completed
+            ? Icons.check_circle
+            : inProgress
+                ? Icons.timelapse
+                : Icons.menu_book_outlined,
+        size: 18,
+        color: prog.completed
+            ? const Color(0xFF7BC47F)
+            : inProgress
+                ? kAccent
+                : kMuted,
+      ),
       title: Text('${m.order}. ${m.title}', style: const TextStyle(fontSize: 14)),
+      subtitle: prog.completed
+          ? null
+          : inProgress
+              ? const Text('In progress', style: TextStyle(fontSize: 11, color: kAccent))
+              : null,
       trailing: m.quiz.isNotEmpty
           ? const Icon(Icons.quiz_outlined, size: 16, color: kMuted)
           : null,
