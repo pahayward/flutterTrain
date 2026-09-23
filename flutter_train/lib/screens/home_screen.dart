@@ -4,7 +4,6 @@ import '../core/app_state.dart';
 import '../core/code_runner.dart';
 import '../core/theme.dart';
 import '../models/models.dart';
-import 'chat_screen.dart';
 import 'course_screen.dart';
 import 'search_screen.dart';
 import 'settings_screen.dart';
@@ -34,14 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('flutterTrain', style: TextStyle(fontWeight: FontWeight.w700)),
         actions: [
-          IconButton(
-            tooltip: 'AI assistant',
-            icon: const Icon(Icons.auto_awesome_outlined),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const ChatScreen()),
-            ),
-          ),
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () => Navigator.push(

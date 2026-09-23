@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/app_state.dart';
 import '../core/code_runner.dart';
+import '../core/page_share.dart';
 import '../core/theme.dart';
 import '../models/models.dart';
 import '../widgets/code_block.dart';
@@ -86,6 +87,11 @@ class _LessonScreenState extends State<LessonScreen> {
           ),
         ),
         actions: [
+          IconButton(
+            tooltip: 'Share as Markdown',
+            icon: const Icon(Icons.share_outlined),
+            onPressed: _share,
+          ),
           IconButton(
             tooltip: 'Toggle bookmark',
             icon: Icon(
@@ -261,6 +267,17 @@ class _LessonScreenState extends State<LessonScreen> {
     final next = sec.modules.firstWhere((m) => m.order == order);
     Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (_) => LessonScreen(state: s, module: next)));
+  }
+
+  Future<void> _share() async {
+    final m = widget.module;
+    final ok = await PageShare.shareMarkdown(
+        m.title, PageShare.lessonMarkdown(m, s.courseOf(m.courseId)));
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Sharing is not available on this device')),
+      );
+    }
   }
 
   Future<void> _editNotes() async {

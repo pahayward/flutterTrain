@@ -13,8 +13,8 @@ code examples, quizzes, and a timed exam simulator — with the code executed
 
 Courseware and app runtime both work **without a network connection**. The app
 loads bundled content from a precompiled asset pack and stores progress, notes,
-and bookmarks locally. The only networked feature is an optional AI assistant
-dialog (OpenRouter), which is disabled when no API key is configured.
+and bookmarks locally. To get help from an AI assistant, share any lesson or
+quiz question as a Markdown file to the assistant app of your choice.
 
 ## Screenshots
 
@@ -58,8 +58,11 @@ dialog (OpenRouter), which is disabled when no API key is configured.
   highlighting.
 - **Practice mode** — rapid-fire mixed-question drill from a course's entire
   question bank.
-- **Settings** — progress export to JSON, reset-all-progress, and optional
-  OpenRouter API key for the assistant chat.
+- **Share as Markdown** — the share button on a lesson or quiz question sends
+  the page as a `.md` file through the Android share sheet, ready to hand to
+  an AI assistant or any other app. Timed exams hide the button, and a quiz
+  question includes its answer only after you answer it correctly.
+- **Settings** — progress export to JSON and reset-all-progress.
 
 ## Repository layout
 
@@ -75,7 +78,7 @@ flutterTrain/
 │   │   ├── main.dart            #   entry point, dark theme, error shell
 │   │   ├── core/                #   content engine, code runner, search, progress, state
 │   │   ├── models/              #   Course / Section / Module data model
-│   │   ├── screens/             #   home, course, lesson, quiz, practice, chat, search, settings
+│   │   ├── screens/             #   home, course, lesson, quiz, practice, search, settings
 │   │   └── widgets/             #   code block + content renderer widgets
 │   ├── go/                      #   Go engine source (yaegi bind target)
 │   ├── android-overlay/         #   Gradle/Chaquopy/sandbox overlay (source of truth for android/)

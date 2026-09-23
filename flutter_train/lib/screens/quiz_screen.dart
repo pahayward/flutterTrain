@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../core/app_state.dart';
+import '../core/page_share.dart';
 import '../core/theme.dart';
 import '../models/models.dart';
 
@@ -216,6 +217,20 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
+  Future<void> _share() async {
+    final ok = await PageShare.shareMarkdown(
+      '${widget.title} q${_index + 1}',
+      PageShare.questionMarkdown(
+          widget.title, _index + 1, _max, _q, _chosen.toList(),
+          revealAnswer: widget.immediate && _checked[_index]!),
+    );
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Sharing is not available on this device')),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -224,6 +239,13 @@ class _QuizScreenState extends State<QuizScreen> {
         appBar: AppBar(
           title: Text(widget.title, style: const TextStyle(fontSize: 16)),
           actions: [
+            // No sharing mid-exam: the timed simulator should stay closed-book.
+            if (!widget.timed && !_graded)
+              IconButton(
+                tooltip: 'Share question as Markdown',
+                icon: const Icon(Icons.share_outlined),
+                onPressed: _share,
+              ),
             if (_running && !_graded)
               Center(
                 child: Padding(

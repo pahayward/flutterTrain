@@ -67,4 +67,5 @@ chaquopy {
 
 dependencies {
     implementation files("libs/goengine-release.aar")
+    implementation "androidx.core:core:1.13.1"  // FileProvider for page sharing
 }

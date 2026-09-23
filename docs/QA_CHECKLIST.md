@@ -36,8 +36,12 @@ Smoke-test every release APK against this list. Expected result for every item:
 - [ ] Exam result shows score/total/percentage and pass threshold; a **Retry** option appears on failure.
 - [ ] Result is recorded in Overview → Recent exams.
 
+## Sharing
+- [ ] Lesson share button opens the share sheet with a `.md` file holding the title, course/section metadata, and full lesson body.
+- [ ] Quiz share sends the question and choices; answer + explanation included only once answered correctly.
+- [ ] Share button is hidden during the timed exam simulator.
+
 ## Settings & data
-- [ ] OpenRouter key saved; assistant replies (needs internet); without key, chat shows offline notice and never sends anything.
 - [ ] Export progress → JSON file appears under app documents; readable.
 - [ ] Reset all progress wipes module state; restarts clean.
 - [ ] Rapid practice (from course screen) mixes questions from all sections.

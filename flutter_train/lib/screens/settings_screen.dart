@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/app_state.dart';
 import '../core/theme.dart';
@@ -201,15 +200,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        const Text('OpenRouter AI',
-            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
-        const SizedBox(height: 4),
-        const Text(
-            'Optional. Needed for the AI assistant. The app is fully functional offline regardless.',
-            style: TextStyle(color: kMuted, fontSize: 13)),
-        const SizedBox(height: 8),
-        _keyField(),
-        const SizedBox(height: 24),
         const Text('Data',
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
         const SizedBox(height: 8),
@@ -249,57 +239,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               style: TextStyle(color: kMuted, fontSize: 12, height: 1.5)),
         ),
       ],
-    );
-  }
-
-  Widget _keyField() {
-    Future<String?> getKey() async =>
-        (await SharedPreferences.getInstance()).getString('openrouter_key');
-    return FutureBuilder<String?>(
-      future: getKey(),
-      builder: (ctx, snap) {
-        final key = snap.data ?? '';
-        return TextField(
-          key: const ValueKey('openrouter_key'),
-          obscureText: true,
-          decoration: InputDecoration(
-            labelText: 'OpenRouter API key',
-            hintText: 'sk-or-…',
-            filled: true,
-            fillColor: kSurface,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide.none,
-            ),
-            helperText: key.isEmpty
-                ? 'Not set — assistant stays offline'
-                : 'Set — AI assistant enabled',
-            suffixIcon: IconButton(
-              icon: Icon(key.isEmpty ? Icons.key_off : Icons.key,
-                  color: key.isEmpty ? kMuted : kAccent),
-              onPressed: () async {
-                final sp = await SharedPreferences.getInstance();
-                await sp.remove('openrouter_key');
-                setState(() {});
-              },
-            ),
-          ),
-          onSubmitted: (v) async {
-            final sp = await SharedPreferences.getInstance();
-            if (v.trim().isEmpty) {
-              await sp.remove('openrouter_key');
-            } else {
-              await sp.setString('openrouter_key', v.trim());
-            }
-            if (mounted) setState(() {});
-            if (ctx.mounted) {
-              ScaffoldMessenger.of(ctx).showSnackBar(
-                const SnackBar(content: Text('Key saved')),
-              );
-            }
-          },
-        );
-      },
     );
   }
 
