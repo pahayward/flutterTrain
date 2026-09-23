@@ -16,8 +16,15 @@ loads bundled content from a precompiled asset pack and stores progress, notes,
 and bookmarks locally. The only networked feature is an optional AI assistant
 dialog (OpenRouter), which is disabled when no API key is configured.
 
+## Screenshots
+
+| Course library | Lesson with runnable code | Quiz |
+|---|---|---|
+| <img src="docs/Screenshot_2026-09-23-06-31-50-993_com.fluttertrain.jpg" alt="Home screen listing the bundled courses with progress" width="250"> | <img src="docs/Screenshot_2026-09-23-06-31-37-863_com.fluttertrain.jpg" alt="Python lesson with a runnable code block" width="250"> | <img src="docs/Screenshot_2026-09-23-06-33-24-863_com.fluttertrain.jpg" alt="Lesson quiz showing a graded answer and explanation" width="250"> |
+
 ## Contents
 
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Repository layout](#repository-layout)
 - [Architecture](#architecture)
